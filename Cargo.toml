@@ -2,10 +2,10 @@
 name = "rust_lemmatizer"
 version = "0.1.0"
 edition = "2021"
-authors = ["Ian Goodale"]
+authors = ["Ian Goodale", "kaubu"]
 description = "A lemmatizing package for use with a .csv dictionary of lemmas and their corresponding words."
 readme = "README.md"
-repository = "https://github.com/ian-nai/rust_lemmatizer"
+repository = "https://github.com/kaubu/rust_lemmatizer2"
 license = "GPL-3.0-or-later"
 keywords = ["NLP", "lemmatization"]
 categories = ["text-processing"]
@@ -18,6 +18,10 @@ path = "src/lib.rs"
 [[bin]]
 name = "get_lemmas"
 path = "bin/get_lemmas.rs"
+
+[[bin]]
+name = "get_lemmas_from_string"
+path = "bin/get_lemmas_from_string.rs"
 
 [dependencies]
 csv = "1.1"
