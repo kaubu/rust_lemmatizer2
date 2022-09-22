@@ -12,7 +12,7 @@ This is a FORK of another project, available here: [ian-nai/rust_lemmatizer](htt
 - Added .gitignore
 
 ### TODO
--[ ] Change functions so they return text instead of outputting to a file
+- [ ] Change functions so they return text instead of outputting to a file
 
 ## How to Use
 ### On Files
