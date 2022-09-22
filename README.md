@@ -4,6 +4,16 @@ A lemmatizing package written in Rust.
 ## Notes
 This is a FORK of another project, available here: [ian-nai/rust_lemmatizer](https://github.com/ian-nai/rust_lemmatizer)
 
+### Differences
+- Added an example .txt file to play around with
+- Moved lib.rs into src/
+- Made it runnable by changing `src/bin/get_lemmas.rs` into `bin/get_lemmas.rs` in Cargo.toml
+- Made `get_lemmas_from_string` binary actually runnable using `--bin`
+- Added .gitignore
+
+### TODO
+-[ ] Change functions so they return text instead of outputting to a file
+
 ## How to Use
 ### On Files
 To lemmatize text in a file, run the get_lemmas script using the following arguments. This script saved to a file named "lemmatized.csv" or "lemmatized.txt" depending on user input.
