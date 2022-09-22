@@ -1,1 +1,0 @@
-/run/media/me/Games/Documents/Coding/Rust/NOT_MINE/rust_lemmatizer2/target/debug/get_lemmas: /run/media/me/Games/Documents/Coding/Rust/NOT_MINE/rust_lemmatizer2/bin/get_lemmas.rs /run/media/me/Games/Documents/Coding/Rust/NOT_MINE/rust_lemmatizer2/src/lib.rs
