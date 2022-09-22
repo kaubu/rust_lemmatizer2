@@ -17,7 +17,7 @@ path = "src/lib.rs"
 
 [[bin]]
 name = "get_lemmas"
-path = "src/bin/get_lemmas.rs"
+path = "bin/get_lemmas.rs"
 
 [dependencies]
 csv = "1.1"
