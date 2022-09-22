@@ -1,3 +1,6 @@
+// Original by ian-nai
+// Modified by kaubu, 2022/09/22
+
 extern crate csv;
 
 use std::collections::HashMap;
@@ -31,7 +34,10 @@ pub fn get_lemma_from_string(word_list: Vec<String>, dict_name: &str) {
     process_data_from_string(word_list, lemma_map);
 }
 
-pub fn process_data_from_string(word_list: Vec<String>, lemma_map: HashMap<String, String>) {
+pub fn process_data_from_string(
+    word_list: Vec<String>,
+    lemma_map: HashMap<String, String>
+) {
     let mut lemma_string: Vec<String> = Vec::new();
 
     for line in &word_list {
@@ -65,7 +71,9 @@ pub fn process_data_from_string(word_list: Vec<String>, lemma_map: HashMap<Strin
 }
 
 pub fn get_words(filename: &str, dict_name: &str, file_output: &str) {
-    let reader = BufReader::new(File::open(filename).expect("Cannot open file"));
+    let reader = BufReader::new(
+        File::open(filename).expect("Cannot open file")
+    );
 
     let mut word_list: Vec<String> = Vec::new();
     let mut original_text: Vec<String> = Vec::new();
@@ -86,7 +94,12 @@ pub fn get_words(filename: &str, dict_name: &str, file_output: &str) {
     get_lemma(word_list, dict_name, file_output, original_text);
 }
 
-pub fn get_lemma(word_list: Vec<String>, dict_name: &str, file_output: &str, original_text: Vec<String>) {
+pub fn get_lemma(
+    word_list: Vec<String>,
+    dict_name: &str,
+    file_output: &str,
+    original_text: Vec<String>
+) {
     let dict_lines = vec![dict_name];
 
     let mut lemma_map: HashMap<String, String> = HashMap::new();
@@ -103,7 +116,12 @@ pub fn get_lemma(word_list: Vec<String>, dict_name: &str, file_output: &str, ori
     process_data(word_list, lemma_map, file_output, original_text);
 }
 
-pub fn process_data(word_list: Vec<String>, lemma_map: HashMap<String, String>, file_output: &str, original_text: Vec<String>) {
+pub fn process_data(
+    word_list: Vec<String>,
+    lemma_map: HashMap<String, String>,
+    file_output: &str,
+    original_text: Vec<String>
+) {
     let mut lemma_string: Vec<String> = Vec::new();
 
     for line in &word_list {
@@ -145,14 +163,16 @@ pub fn output_lemmatized_txt(lemma_string: Vec<String>) {
     for word in lemma_string {
         writable_lemmas.push(word);
     }
-    fs::write("lemmatized.txt", writable_lemmas.join("\n")).expect("Cannot write");
+    fs::write("lemmatized.txt", writable_lemmas.join("\n"))
+        .expect("Cannot write");
 }
 
 pub fn output_lemmatized_csv(
     original_text: Vec<String>,
     lemma_string: Vec<String>,
 ) -> Result<(), Box<dyn Error>> {
-    let combined_vector = original_text.into_iter().zip(lemma_string).collect::<Vec<_>>();
+    let combined_vector = original_text.into_iter().zip(lemma_string)
+        .collect::<Vec<_>>();
 
     let mut wtr = csv::Writer::from_path("lemmatized.csv")?;
     wtr.write_record(&["Original Text", "Lemmatized Text"])?;

@@ -1,9 +1,9 @@
 [package]
-name = "rust_lemmatizer"
+name = "rust_lemmatizer2"
 version = "0.1.0"
 edition = "2021"
 authors = ["Ian Goodale", "kaubu"]
-description = "A lemmatizing package for use with a .csv dictionary of lemmas and their corresponding words."
+description = "A fork of the original rust_lemmatizer. A lemmatizing package for use with a .csv dictionary of lemmas and their corresponding words."
 readme = "README.md"
 repository = "https://github.com/kaubu/rust_lemmatizer2"
 license = "GPL-3.0-or-later"
