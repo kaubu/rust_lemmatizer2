@@ -1,5 +1,8 @@
-# rust_lemmatizer
+# rust_lemmatizer2
 A lemmatizing package written in Rust.
+
+## Notes
+This is a FORK of another project, available here: [ian-nai/rust_lemmatizer](https://github.com/ian-nai/rust_lemmatizer)
 
 ## How to Use
 ### On Files
@@ -11,7 +14,7 @@ cargo run --bin get_lemmas [YOUR FILENAME] [PATH TO LEMMA FILE] [OUTPUT - txt, c
 ```
 An example command would be:
 ```
-cargo run --bin get_lemmas src/lemma_example.txt src/lemma_dict.csv csv 
+cargo run --bin get_lemmas lemma_example.txt lemmas.csv csv
 ```
 
 ### On Strings
@@ -22,7 +25,7 @@ cargo run --bin get_lemmas_from_string ["YOUR STRING"] [PATH TO LEMMA FILE] [OUT
 ```
 For example:
 ```
-cargo run --bin get_lemmas_from_string "This is an example string." src/lemma_dict.csv vec
+cargo run --bin get_lemmas_from_string "This dog bakes cakes better than your one" ./lemmas.csv txt
 ```
 
 ### To use in your own project
